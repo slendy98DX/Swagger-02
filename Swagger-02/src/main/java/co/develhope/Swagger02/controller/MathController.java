@@ -29,12 +29,13 @@ public class MathController {
         return new ArithmeticOperation(
                 "division",
                 2,
-                "This operation divides two numbers (divident and divisor) and returns the quotient", new String[]{"remainder", "quotient","divisor","divident"});
+                "This operation divides two numbers (divident and divisor) and returns the quotient", new String[]{
+                        "identity","zero","dividing a number for iteself"});
     }
 
     @GetMapping("/multiplication")
     @Operation(summary = "multiplication", description = "This method does the multiplication of two input numbers")
-    public int getMultiplicationValue(@Parameter(description = "Input numbers for the multiplication") @RequestParam int number1, @RequestParam int number2){
+    public int getMultiplicationValue(@Parameter(description = "1st input number") @RequestParam int number1, @Parameter(description = "2nd input number") @RequestParam int number2){
         return number1*number2;
     }
 
