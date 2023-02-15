@@ -30,7 +30,7 @@ public class MathController {
                 "division",
                 2,
                 "This operation divides two numbers (divident and divisor) and returns the quotient", new String[]{
-                        "identity","zero","dividing a number for iteself"});
+                        "identity","zero","dividing a number for itself"});
     }
 
     @GetMapping("/multiplication")
