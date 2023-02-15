@@ -42,6 +42,6 @@ public class MathController {
     @GetMapping("/square/{n}")
     @Operation(summary = "square", description = "This method does the square of an input number")
     public double getSquare(@Parameter(description = "Random number n to square")@PathVariable double n){
-        return Math.sqrt(n);
+        return n*n;
     }
 }
